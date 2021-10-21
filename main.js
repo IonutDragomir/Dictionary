@@ -29,14 +29,20 @@ function searchWord() {
             contor = 1;
         }
     }
-    if (contor === 0) {
+    if (contor === 0 && isWord) {
         document.getElementById("response").innerHTML += `<p>The word you are searching is not in dictionary</p>`
-    } else {
-        document.getElementById("response").innerHTML += `<p>The word you are searching is in dictionary</p>`
+    } 
+     if(contor === 1) {
+        document.getElementById("response").innerHTML += `<p>Your search is already in dictionary. Press Show dictionary to view the word</p>`
     }
 }
 
 
 function moreWords() {
     document.getElementById("response").innerHTML += `<p>${book}</p>`
+}
+
+function clearField() {
+    document.getElementById("response").innerHTML = `<div id="response"></div>`
+    
 }
