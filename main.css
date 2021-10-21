@@ -1,0 +1,51 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    
+    margin: 20vh 50vh 0vh 90vh;
+}
+
+label {
+    display: block;
+}
+
+input {
+    border-radius: 5px;
+    size: 100rem;
+}
+button {
+    background-color: rgba(0, 140, 255, 0.829);
+    color: white;
+    border-radius: 5px;
+    border: white;
+    padding: 7px;
+    display: inline-block;
+    margin: 1vh 50vh 1vh 90vh;
+}
+
+.one, .two  {
+    background-color: rgba(0, 140, 255, 0.829);
+    color: white;
+    border-radius: 5px;
+    border: white;
+    padding: 7px;
+    margin: 5px;
+}
+
+.won {
+    background-color: green;
+    display: inline-block;
+    padding: 14vh;
+    margin: 1vh 50vh 1vh 90vh;
+}
+
+.lose {
+    background-color: red;
+    display: inline-block;
+    padding: 14vh;
+    margin: 1vh 50vh 1vh 90vh;
+}
