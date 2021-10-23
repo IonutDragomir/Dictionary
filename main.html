@@ -1,28 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/new sheletton project.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Dictionary</title>
-</head>
-<body>
+  </head>
+  <body>
     <form>
-        <label for="words">Insert a word:</label><br>
-        <input class="insertWords" type="text" name="words" id="field" placeholder="Insert:"><br>
-        <button class="selectButton" type="reset" onclick="return dictionary();">Select</button>
-        <button class="showCollection" type="reset" onclick="return moreWords();">Show dictionary</button><br>
-        <label for="search">Search for a word:</label><br>
-        <input class="searchWords" type="text" name="search" id="searchPlace" placeholder="Search:"><br>
-        <button class="search" type="reset" onclick="return searchWord();" ><i style="font-size:18px" class="fa">&#xf002;</i></button>
-        <button class="clearButton" type="reset" onclick="return clearField();">Clear</button>
+      <label for="words">Add the word:</label><br />
+      <input
+        class="insertWords"
+        type="text"
+        name="words"
+        id="field"
+        placeholder="Insert:"
+      /><br />
+      <button class="addButton" type="reset" onclick="return addWord();">
+        Add</button
+      ><button
+        class="showDictionary"
+        type="reset"
+        onclick="return showDictionary();"
+      >
+        Show dictionary</button
+      ><br />
+      <button class="search" type="reset" onclick="return searchWord('0');">
+        <i style="font-size: 18px" class="fa">&#xf002;</i>
+      </button>
+      <button class="clearButton" type="reset" onclick="return clearMessage();">
+        Clear
+      </button>
     </form>
-    <div id ="response">
-        
 
-    </div>
-    <script src="/main.js"></script>
-</body>
+    <div id="showMessage"></div>
+    <script src="/new sheletton project.js"></script>
+  </body>
 </html>
