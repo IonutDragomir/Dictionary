@@ -1,59 +1,56 @@
 form {
-    margin-top: 15vh;
-    margin-left: 35vh;
-    
+  margin-top: 15vh;
+  margin-left: 35vh;
 }
 
-label{
-    margin: 50vh 50vh 0vh 50vh;
+label {
+  margin: 50vh 50vh 0vh 50vh;
+  font-weight: bold;
 }
 
 p {
-    margin: 1vh 50vh 0vh 80vh;
+  margin: 1vh 50vh 0vh 86vh;
 }
 
-.insertWords:focus, .searchWords:focus {
-    outline: none;
-    border:2px solid rgb(69, 116, 219);
-    box-shadow: 0 0 10px #719ECE;
-  }
-
-.selectButton {
-    background-color: rgba(45, 111, 235, 0.945);
-    border-radius: 15px;
-    margin: 1vh 1vh 3vh 50vh;
-}
-
-.showCollection {
-    background-color: rgba(45, 111, 235, 0.945);
-    border-radius: 15px;
+em {
+    color: blue;
 }
 
 .insertWords {
-    border-radius: 15px;
-    margin: 1vh 50vh 0vh 50vh;
-    padding: 5px;
+  border-radius: 15px;
+  margin: 1vh 50vh 0vh 50vh;
+  padding: 5px;
 }
 
-.searchWords {
-    border-radius: 15px;
-    margin: 1vh 1vh 0vh 50vh;
-    padding: 5px;
+.insertWords:focus {
+  outline: none;
+  border: 2px solid rgb(69, 116, 219);
+  box-shadow: 0 0 10px #719ece;
 }
 
-.search{
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 42%;
-    background-color: rgba(54, 148, 236, 0.945);
-    margin-left: 50vh;
-    margin-top: 1vh;
-    
+.addButton {
+  background-color: rgba(45, 111, 235, 0.945);
+  border-radius: 15px;
+  margin: 1vh 1vh 0vh 50vh;
+}
+
+.showDictionary {
+  background-color: rgba(45, 111, 235, 0.945);
+  border-radius: 15px;
+}
+
+.search {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-radius: 42%;
+  background-color: rgba(54, 148, 236, 0.945);
+  margin-left: 50vh;
+  margin-top: 1vh;
 }
 
 .clearButton {
-    background-color: rgba(45, 111, 235, 0.945);
-    border-radius: 15px;
-    margin: 1vh 1vh 3vh 1vh;
-    padding: 0.30rem;
+  background-color: rgba(45, 111, 235, 0.945);
+  border-radius: 15px;
+  margin: 1vh 1vh 3vh 1vh;
+  padding: 0.3rem;
 }
