@@ -1,48 +1,40 @@
-let book = [];
+let dictionary = [];
 
-
-function collect(id) {
-    return(document.getElementById(id).value);
-}
-
-function dictionary() {
-    let isWord = collect("field");
-    let contor = 0;
-    for( let index = 0; index < book.length; ++index) {
-        if(isWord === book[index]) {
-            contor = 1;
-        }
-
+function searchWord(differentiator) {
+  // if differentiator is 0 I want to display the second message
+  // if it is empty I want to add the word without displaying the second message
+  let isWord = document.getElementById("field").value;
+  for (let wordPosition = 0; wordPosition < dictionary.length; ++wordPosition) {
+    if (isWord === dictionary[wordPosition]) {
+      isWord = -1;
     }
-    if (contor === 0) {
-        book.push(isWord);
-    } else {
-        document.getElementById("response").innerHTML += `<p>The word you are trying to add is already in dictionary</p>`
-    }
+  }
+  if (isWord === -1) {
+    document.getElementById(
+      "showMessage"
+    ).innerHTML += `<p>Your word is already in dictionary. Press <em>Show dictionary</em> to view the word.</p>`;
+  } else if (isWord != -1 && isWord && differentiator == 0) {
+    document.getElementById(
+      "showMessage"
+    ).innerHTML += `<p>The word you are searching is not in dictionary.</p>`;
+  }
+  return isWord;
 }
 
-function searchWord() {
-    let isWord = collect("searchPlace");
-    let contor = 0;
-    for( let index = 0; index < book.length; ++index) {
-        if(isWord === book[index]) {
-            contor = 1;
-        }
-    }
-    if (contor === 0 && isWord) {
-        document.getElementById("response").innerHTML += `<p>The word you are searching is not in dictionary</p>`
-    } 
-     if(contor === 1) {
-        document.getElementById("response").innerHTML += `<p>Your search is already in dictionary. Press Show dictionary to view the word</p>`
-    }
+function addWord() {
+  let addOrNot = searchWord();
+  if (addOrNot != -1 && addOrNot) {
+    dictionary.push(addOrNot);
+  }
 }
 
-
-function moreWords() {
-    document.getElementById("response").innerHTML += `<p>${book}</p>`
+function showDictionary() {
+  document.getElementById(
+    "showMessage"
+  ).innerHTML += `<p><em>Dictionary</em>: ${dictionary}</p>`;
 }
 
-function clearField() {
-    document.getElementById("response").innerHTML = `<div id="response"></div>`
-    
-}
+function clearMessage() {
+  document.getElementById(
+    "showMessage"
+  ).innerHTML = `<div id="showMessage"></div>`;
